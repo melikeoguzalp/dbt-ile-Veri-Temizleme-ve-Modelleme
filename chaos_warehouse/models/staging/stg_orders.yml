@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Cleaned and normalized orders"
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null

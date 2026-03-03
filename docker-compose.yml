@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: pg_local
+    restart: always
+    environment:
+      POSTGRES_USER: your username
+      POSTGRES_PASSWORD: your password
+      POSTGRES_DB: your db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: gold_customer_orders
+    description: "Analytical layer combining customers, orders, and payments"
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+      - name: order_id
+        tests:
+          - not_null
+      - name: payment_id
+        tests:
+          - not_null
